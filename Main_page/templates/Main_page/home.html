@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>上饶旅游景区推荐</title>
+  <link rel="stylesheet" href={% static "Main_page/main_page.css" %} />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">上饶旅游</div>
+    <nav class="nav-links">
+      <a href="#">首页</a>
+      <a href="#">景点</a>
+      <a href="#">美食</a>
+      <a href="#">Log in</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="{{ MEDIA_URL }}images/婺源秋天.jpg" alt="上饶全景图" />
+    <div class="hero-text">
+      <h1>探索上饶的自然与人文之美</h1>
+      <p>一座被青山绿水环绕、历史文化交融的魅力城市</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="content">
+        <div class="text">
+          <h2>上饶在哪里？</h2>
+          <p>上饶位于江西省东北部，与浙江、福建、安徽三省交界，是华东通往中部的重要枢纽城市。拥有便捷的高铁、高速网络，山川秀美，人文底蕴深厚，是江西的“东大门”。</p>
+        </div>
+        <div class="image">
+          <img src="{{ MEDIA_URL }}images/三清山.jpg" alt="上饶地理位置图" style="width: 500px;height: 400px"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="content">
+        <div class="image">
+          <img src="{{ MEDIA_URL }}images/雾中的房子.jpg" alt="上饶景点图" style="width: 400px;height: 300px"/>
+        </div>
+        <div class="text">
+          <h2>为什么选择上饶？</h2>
+          <p>从三清山的奇峰怪石，到婺源的油菜花海；从龟峰的丹霞地貌，到铅山的古驿道和书院文化，上饶不仅风景绝美，而且拥有深厚的文化底蕴，是文化与自然的完美融合。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content">
+        <div class="text">
+          <h2>最佳旅游时间</h2>
+          <p>春天的婺源油菜花、夏天的三清山避暑、秋天的晒秋古村、冬季的温泉小镇，上饶一年四季皆可游玩。春秋尤佳，气候宜人，景色迷人，是摄影与户外活动的理想选择。</p>
+        </div>
+        <div class="image">
+          <img src="{{ MEDIA_URL }}images/葛仙村.jpg" alt="旅游季节图" style="width: 500px;height: 400px"/>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 一个真正的man</p>
+  </footer>
+
+  <button id="backToTop">↑ 回到顶部</button>
+
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>
+</html>
